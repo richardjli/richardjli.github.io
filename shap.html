@@ -11791,7 +11791,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>First, what is a SHAP value?</p>
+<p>A short introduction to SHAP values:</p>
 <p>When applied to the prediction of overall survival in cancer patients, machine learning models take in an input of predictive variables and output a prediction of mortality risk. Until recently, the ability to interpret how these predictions are made was very limited due to complex modeling of nonlinear relationships and interaction effects.</p>
 <p>SHAP values, described by Lundberg et al., represent a unified framework to interpret machine learning predictions. Essentially, a SHAP value represents how much weight was placed on a variable in the risk prediction of a given patient, with positive or negative values indicating the direction of effect.</p>
 <p>For example, a 80-year-old patient with a positive SHAP value of 0.4 for age indicates that this patient’s age contributed to prediction of greater mortality for this patient relative to other patients in our cohort, when controlling for the other variables in the model. A different 40-year-old patient might have a negative SHAP value of -0.2 for age, indicating that this patient’s young age predicted for a better prognosis.</p>
@@ -11812,7 +11812,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We first trained a gradient-boosted tree model using the open-source xgboost library and generated SHAP values based on the model predictions. Data processing steps are omitted for brevity purposes.</p>
+<p>We first trained a gradient-boosted tree model using the open-source xgboost library and generated SHAP values based on the model predictions. Data processing steps are omitted for purposes of brevity</p>
 
 </div>
 </div>
@@ -13330,7 +13330,7 @@ EEIIIYTdScAhhBBCCLuTgEMIIYQQdicBhxBCCCHs7v8BC+hSC4Dmg3UAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We next apply SHAP interaction values, which isolate the impact of interaction effects on predictions, to visualize nonlinear interactions between variables. We use the recently published example of low Prostate-specific Antigen (PSA), High-grade prostate cancer, which has been identified as a unique entity with particularly poor prognosis (Mahal et al. Eur Urol. 2018).</p>
-<p>By plotting the SHAP interaction values, we can rapidly visualize that patients with low PSA and Gleason 9-10 have high SHAP values (higher mortality) with a rapidly sloping U-shaped distribution. The same interaction effect is not visualized for Gleason 6-8.</p>
+<p>By plotting the SHAP interaction values, we can rapidly visualize that patients with low PSA and Gleason 9-10 have high SHAP values (higher mortality) with a rapidly sloping U-shaped distribution. The same interaction effect is not visualized for Gleason 7-8.</p>
 
 </div>
 </div>
@@ -15108,6 +15108,15 @@ EATB54jBIQiCIAiCzxGDQxAEQRAEnyMGhyAIgiAIPkcMDkEQBEEQfI4YHIIgCIIg+BwxOARBEARB
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Subsequent confirmatory analysis using linear models supported this finding: using Kaplan-Meier estimates, 5-year OS was 87.7% in Gleason 8+ patients with PPC &lt; 50% versus 77.2% in patients with PPC≥50% (p &lt; 0.001), compared to 89.1% versus 86.0% in Gleason 7 patients (p &lt; 0.001). The Cox interaction term between PPC≥50% and Gleason score 8+ was highly significant (p &lt; 0.001).</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
