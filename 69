@@ -1,5 +1,5 @@
 {
-  "name": "Tile 69",
+  "name": "Block 69",
   "description": "Located at latitude: 38, longitude: 40. Represents a 4 x 4 square containing 16 pixels. Ownership grants full control over pixel color changes of this tile.",
   "image": "https://i.gyazo.com/92e2d60868b207cd0186ce73a9591e8a.png",
   "attributes": {
